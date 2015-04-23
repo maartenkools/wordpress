@@ -36,11 +36,11 @@ class WPU_Plugin
             add_action('wp_enqueue_scripts', array($this, 'enqueueScripts'));
         }
 
-        /*PucFactory::buildUpdateChecker(
-            'https://github.com/maartenkools/wordpress-utilities/updater/metadata.json',
+        PucFactory::buildUpdateChecker(
+            'https://cdn.rawgit.com/maartenkools/wordpress/master/updater/wp-wordpress-utilities.json',
             $this->file,
             'wp-wordpress-utilities'
-        );*/
+        );
     }
 
     /**

@@ -1,7 +1,7 @@
 {
     "name" : "De Nieuwe Bavo bloeit",
     "slug" : "denieuwebavobloeit",
-    "download_url" : "http://localhost/repository/wordpress-utilities/out/denieuwebavobloeit.zip",
+    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/denieuwebavobloeit.zip",
     "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
     "author" : "Maarten Kools",
     "sections" : {

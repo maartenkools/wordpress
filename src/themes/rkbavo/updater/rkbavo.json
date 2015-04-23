@@ -1,7 +1,7 @@
 {
     "name" : "RK Bavo",
     "slug" : "rkbavo",
-    "download_url" : "http://www.github.com/wordpress/out/themes/rkbavo.zip",
+    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/rkbavo.zip",
     "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
     "author" : "Maarten Kools",
     "sections" : {

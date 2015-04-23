@@ -1,7 +1,7 @@
 {
     "name" : "Kerkengek",
     "slug" : "kerkengek",
-    "download_url" : "http://localhost/repository/wordpress-utilities/out/kerkengek.zip",
+    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/kerkengek.zip",
     "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
     "author" : "Maarten Kools",
     "sections" : {

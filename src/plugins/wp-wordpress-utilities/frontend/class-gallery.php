@@ -6,152 +6,159 @@
  * Date: 3/14/2015
  * Time: 1:06 PM
  */
-class WPU_Gallery
-{
-    private static $cssClass = 'wpu-gallery';
+class WPU_Gallery {
+	private static $cssClass = 'wpu-gallery';
 
-    public static function render($params)
-    {
-        $params = shortcode_atts(array(
-            'tag' => 'div',
-            'cssClass' => '',
-            'randomize' => false
-        ), $params);
+	public static function render( $params ) {
+		$params = shortcode_atts( array(
+			'tag'        => 'div',
+			'cssClass'   => '',
+			'randomize'  => false,
+			'max_width'  => - 1,
+			'max_height' => - 1
+		), $params );
 
-        $post = (isset($GLOBALS['post']) ? $GLOBALS['post'] : null);
+		$post = ( isset( $GLOBALS['post'] ) ? $GLOBALS['post'] : null );
 
-        $dom = new DOMDocument();
-        $root = $dom->createElement($params['tag']);
-        $dom->appendChild($root);
+		$dom  = new DOMDocument();
+		$root = $dom->createElement( $params['tag'] );
+		$dom->appendChild( $root );
 
-        $count = self::__renderChildren($post, $dom, $params);
+		$count = self::__renderChildren( $post, $dom, $params );
 
-        $classes = explode(' ', $params['cssClass']);
-        array_push($classes, self::$cssClass);
-        if ($count == 0) {
-            array_push($classes, 'hidden');
-        }
+		$classes = explode( ' ', $params['cssClass'] );
+		array_push( $classes, self::$cssClass );
+		if ( $count == 0 ) {
+			array_push( $classes, 'hidden' );
+		}
 
-        $root->setAttribute('class', implode(' ', $classes));
+		$root->setAttribute( 'class', implode( ' ', $classes ) );
 
-        return $dom->saveHTML();
-    }
+		return $dom->saveHTML();
+	}
 
-    private static function __renderChildren($post, DOMDocument $dom, $params)
-    {
-        if (!self::__isPostSupported($post)) {
-            return 0;
-        }
+	private static function __renderChildren( $post, DOMDocument $dom, $params ) {
+		if ( ! self::__isPostSupported( $post ) ) {
+			return 0;
+		}
 
-        $root = $dom->childNodes->item(0);
+		$root = $dom->childNodes->item( 0 );
 
-        $options = WPU_Plugin::current()->get_options();
-        $maxDimensions = array(
-            $options->getValue('gallery', 'max_width'),
-            $options->getValue('gallery', 'max_height')
-        );
+		$options = WPU_Plugin::current()->get_options();
+		if ( $params['max_width'] < 0 ) {
+			$params['max_width'] = $options->getValue( 'gallery', 'max_width' );
+		}
+		if ( $params['max_height'] < 0 ) {
+			$params['max_height'] = $options->getValue( 'gallery', 'max_height' );
+		}
 
-        $images = self::__queryImages($post->ID, $params['randomize']);
-        foreach ($images as $image) {
-            $attachmentId = null;
-            $caption = null;
+		$maxDimensions = array(
+			$params['max_width'],
+			$params['max_height']
+		);
 
-            if ($image instanceof stdClass) {
-                $attachmentId = $image->id;
-                $caption = strip_tags($image->fields->caption);
-            } else {
-                $attachmentId = $image->ID;
-                $caption = $image->post_excerpt;
-            }
+		$images = self::__queryImages( $post->ID, $params['randomize'] );
+		foreach ( $images as $image ) {
+			$attachmentId = null;
+			$caption      = null;
 
-            $alt = get_post_meta($attachmentId, '_wp_attachment_image_alt', true);
+			if ( $image instanceof stdClass ) {
+				$attachmentId = $image->id;
+				$caption      = strip_tags( $image->fields->caption );
+			} else {
+				$attachmentId = $image->ID;
+				$caption      = $image->post_excerpt;
+			}
 
-            $div = $root->appendChild($dom->createElement('div'));
+			$alt = get_post_meta( $attachmentId, '_wp_attachment_image_alt', true );
 
-            $a = $dom->createElement('a');
-            $div->appendChild($a);
-            $a->setAttribute('data-lightbox', $post->ID);
-            if (!empty($caption)) {
-                $a->setAttribute('data-title', $caption);
-            }
-            $a->setAttribute('href', wp_get_attachment_url($attachmentId));
+			$div = $root->appendChild( $dom->createElement( 'div' ) );
 
-            $src = wp_get_attachment_image_src($attachmentId, $maxDimensions);
+			$a = $dom->createElement( 'a' );
+			$div->appendChild( $a );
+			$a->setAttribute( 'data-lightbox', $post->ID );
+			if ( ! empty( $caption ) ) {
+				$a->setAttribute( 'data-title', $caption );
+			}
+			$a->setAttribute( 'href', wp_get_attachment_url( $attachmentId ) );
 
-            $dimensions = self::__resizeImage(array($src[1], $src[2]), $maxDimensions);
+			$src = wp_get_attachment_image_src( $attachmentId, $maxDimensions );
 
-            $img = $dom->createElement('img');
-            $a->appendChild($img);
-            $img->setAttribute('src', $src[0]);
-            $img->setAttribute('style', 'width: ' . $dimensions[0] . 'px; height: ' . $dimensions[1] . 'px;');
-            if(!empty($alt)) $img->setAttribute('alt', $alt);
+			$dimensions = self::__resizeImage( array( $src[1], $src[2] ), $maxDimensions );
 
-            $overlay = $dom->createElement('div');
-            $overlay->setAttribute('class', 'image-overlay');
-            $a->appendChild($overlay);
-        }
+			$img = $dom->createElement( 'img' );
+			$a->appendChild( $img );
+			$img->setAttribute( 'src', $src[0] );
+			$img->setAttribute( 'style', 'width: ' . $dimensions[0] . 'px; height: ' . $dimensions[1] . 'px;' );
+			if ( ! empty( $alt ) ) {
+				$img->setAttribute( 'alt', $alt );
+			}
 
-        return count($images);
-    }
+			$overlay = $dom->createElement( 'div' );
+			$overlay->setAttribute( 'class', 'image-overlay' );
+			$a->appendChild( $overlay );
+		}
 
-    private static function __queryImages($randomize)
-    {
-        $images = array();
+		return count( $images );
+	}
 
-        // If the Attachments plugin is enabled, use that to retrieve the images.
-        if (class_exists('Attachments')) {
-            $attachments = new Attachments('attachments');
+	private static function __queryImages( $randomize ) {
+		$images = array();
 
-            while ($attachment = $attachments->get()) {
-                $images[] = $attachment;
-            }
+		// If the Attachments plugin is enabled, use that to retrieve the images.
+		if ( class_exists( 'Attachments' ) ) {
+			$attachments = new Attachments( 'attachments' );
 
-            if (count($images) != 0) {
-                if ($randomize) shuffle($images); // Randomize the order
-                return $images;
-            }
-        }
+			while ( $attachment = $attachments->get() ) {
+				$images[] = $attachment;
+			}
 
-        return $images;
-    }
+			if ( count( $images ) != 0 ) {
+				if ( $randomize ) {
+					shuffle( $images );
+				} // Randomize the order
+				return $images;
+			}
+		}
 
-    private static function __resizeImage($dimensions, $maxDimensions)
-    {
-        $width = $dimensions[0];
-        $height = $dimensions[1];
+		return $images;
+	}
 
-        if ($width > $maxDimensions[0]) {
-            $ratio = $maxDimensions[0] / $width;
+	private static function __resizeImage( $dimensions, $maxDimensions ) {
+		$width  = $dimensions[0];
+		$height = $dimensions[1];
 
-            $width = $width * $ratio;
-            $height = $height * $ratio;
-        }
+		if ( $width > $maxDimensions[0] ) {
+			$ratio = $maxDimensions[0] / $width;
 
-        if ($height > $maxDimensions[1]) {
-            $ratio = $maxDimensions[1] / $height;
+			$width  = $width * $ratio;
+			$height = $height * $ratio;
+		}
 
-            $width = $width * $ratio;
-            $height = $height * $ratio;
-        }
+		if ( $height > $maxDimensions[1] ) {
+			$ratio = $maxDimensions[1] / $height;
 
-        return array($width, $height);
-    }
+			$width  = $width * $ratio;
+			$height = $height * $ratio;
+		}
 
-    private static function __isPostSupported($post)
-    {
-        if (!isset($post)) {
-            return false;
-        }
-        if (!isset($post->ID)) {
-            return false;
-        }
-        if (!is_single($post->ID)) {
-            return false;
-        }
-        if (get_post_type($post->ID) != 'post') {
-            return false;
-        }
+		return array( $width, $height );
+	}
 
-        return true;
-    }
+	private static function __isPostSupported( $post ) {
+		if ( ! isset( $post ) ) {
+			return false;
+		}
+		if ( ! isset( $post->ID ) ) {
+			return false;
+		}
+		if ( ! is_single( $post->ID ) ) {
+			return false;
+		}
+		if ( get_post_type( $post->ID ) != 'post' ) {
+			return false;
+		}
+
+		return true;
+	}
 }

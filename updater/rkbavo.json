@@ -1,0 +1,10 @@
+{
+    "name" : "RK Bavo",
+    "slug" : "rkbavo",
+    "download_url" : "http://localhost/repository/wordpress/out/rkbavo.zip",
+    "version" : "1.0.15113.12030",
+    "author" : "Maarten Kools",
+    "sections" : {
+        "description" : "Represents the theme for rkbavo.nl"
+    }
+}

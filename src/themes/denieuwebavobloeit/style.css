@@ -1,0 +1,313 @@
+/*
+ Theme Name: denieuwebavobloeit
+ Theme URI: http://www.denieuwebavobloeit.nl
+ Description: A child theme to use on the website 'De Nieuwe Bavo bloeit'
+ Author: Maarten Kools
+ Template: onetone
+ Version: {wp-major}.{wp-minor}.{build}.{revision}
+ Text Domain: denieuwebavobloeit
+*/
+@import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(css/pagebuilder.css);
+
+body,
+.section-banner h1,
+.section-banner span, .section-banner .sub-title {
+    font-family: 'Lato', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+.search-form {
+    border: 1px solid #666;
+    overflow: hidden;
+    width: auto;
+    margin: 0 25px;
+}
+
+.search-form input.search-field {
+    float: left;
+    width: 100%;
+    margin-right: -25px;
+    height: 23px;
+    border: 0;
+    background: none;
+    padding-left: 5px;
+    padding-right: 25px;
+    margin-top: 1px;
+}
+
+.search-form input.search-submit {
+    float: right;
+    background: url(../onetone/images/search.png) no-repeat 0 3px;
+    width: 22px;
+    height: 25px;
+    cursor: pointer;
+    border: 0;
+    text-indent: 99999px;
+}
+
+.section-banner,
+.section-banner h1,
+.section-banner .sub-title,
+.section-banner .banner-scroll a,
+.banner-sns li a icon,
+.section-banner a {
+    color: #ffffff;
+}
+
+.section-banner icon {
+    -webkit-text-stroke: 1px #333333;
+    text-shadow: 3px 3px 0 #333333, -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
+}
+
+.section-banner,
+.section-banner h1,
+.section-banner .sub-title {
+    background-color: rgba(102, 102, 102, 0.4);
+}
+
+.banner-box span,
+.banner-box .sub-title {
+    font-size: 32px;
+}
+
+/* Section styles */
+.section-about .home-container,
+.section-schedule .home-container {
+    color: #ffffff;
+    background-color: rgba(102, 102, 102, 0.4);
+}
+
+.section-schedule .home-container h1,
+.section-about .home-container h1,
+.section-schedule .home-container h3,
+.section-about .home-container h3 {
+    color: #ffffff;
+}
+
+/* About section */
+.section-about li {
+    list-style-type: disc;
+}
+
+/* Schedule section */
+.section-schedule .home-container {
+    color: #ffffff;
+    background-color: rgba(102, 102, 102, 0.4);
+
+}
+
+.section-schedule li {
+    list-style-type: none;
+}
+
+.home-logo {
+    display: none;
+}
+
+section.section {
+    padding: 20px 0;
+}
+
+section.section:not(:first-of-type) {
+    margin-top: 40px;
+}
+
+section.section:not(:last-of-type) {
+    -webkit-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+/* 404 page styles */
+html.error404 {
+    height: 100%;
+}
+
+body.error404 {
+    height: 100%;
+}
+
+.error404 .site {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+.error404 header {
+    display: table-row;
+    width: 100%;
+}
+
+.error404 section {
+    display: table-row;
+    height: 100%;
+    width: 100%;
+}
+
+.error404 section.content {
+    display: block;
+}
+
+.error404 section.content .home-container {
+    background-color: rgba(102, 102, 102, 0.4);
+    top: 20px;
+}
+
+.error404 section.content .home-container h1 {
+    font-size: 64px;
+}
+
+.error404 section.content * {
+    color: #ffffff !important;
+}
+
+.error404 section.content > div > icon {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.error404 section.content .searchform,
+.error404 section.content .search-form {
+    border-color: #ffffff;
+}
+
+.error404 section.content #searchsubmit,
+.error404 section.content .search-submit {
+    background: url(images/search.png) no-repeat 0 3px;
+}
+
+.error404 ::-webkit-input-placeholder {
+    color: #ffffff;
+}
+
+.error404 :-moz-placeholder {
+    color: #ffffff;
+}
+
+.error404 ::-moz-placeholder {
+    color: #ffffff;
+}
+
+.error404 :-ms-input-placeholder {
+    color: #ffffff;
+}
+
+.error404 footer {
+    display: table-row;
+    width: 100%;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 919px) {
+    .banner-box span,
+    .banner-box .sub-title {
+        font-size: 18px;
+    }
+
+    h1, .section h1 {
+        font-size:36px;
+    }
+    h2, .section h2 {
+        font-size:26px;
+    }
+    h3, .section h3 {
+        font-size:23px;
+    }
+    h4, .section h4 {
+        font-size:20px;
+    }
+    h5, .section h5 {
+        font-size:18px;
+    }
+    h6, .section h6 {
+        font-size:16px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 21px 0 7px;
+    }
+
+    body, button, input, select, textarea, .home-container {
+        font-size: 14px;
+        line-height: 1.3em;
+    }
+
+    .section h1, .section-about h1, .section-services h1, .section-portfolio h1, .section-contact h1, .section-custom h1 {
+        font-size: 36px;
+        margin-bottom: 23px;
+        line-height: 48px;
+    }
+
+    .error404 section.content .home-container h1 {
+        font-size: 36px;
+    }
+
+    .wr-element-heading {
+        margin-bottom: 14px !important;
+    }
+
+    .jsn-bootstrap3 .wr-element-container p {
+        margin: 0 0 12px;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .banner-box span,
+    .banner-box .sub-title {
+        font-size: 9px;
+    }
+
+    h1, .section h1 {
+        font-size:18px;
+    }
+    h2, .section h2 {
+        font-size:13px;
+    }
+    h3, .section h3 {
+        font-size:12px;
+    }
+    h4, .section h4 {
+        font-size:11px;
+    }
+    h5, .section h5 {
+        font-size:10px;
+    }
+    h6, .section h6 {
+        font-size:9px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        margin: 10px 0 4px;
+    }
+
+    body, button, input, select, textarea, .home-container {
+        font-size: 8px;
+        line-height: 1.1em;
+    }
+
+    .section h1, .section-about h1, .section-services h1, .section-portfolio h1, .section-contact h1, .section-custom h1 {
+        font-size: 18px;
+        margin-bottom: 11px;
+        line-height: 24px;
+    }
+
+    .error404 section.content .home-container h1 {
+        font-size: 18px;
+    }
+
+    .wr-element-heading {
+        margin-bottom: 7px !important;
+    }
+
+    .jsn-bootstrap3 .wr-element-container p {
+        margin: 0 0 6px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-12 {
+        float: left;
+    }
+}

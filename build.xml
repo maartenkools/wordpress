@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<!DOCTYPE project>
+<project name="wordpress" default="build" basedir=".">
+	<description>
+		An ANT task to build the themes and plugins for this project.
+	</description>
+
+    <property name="project.dir" location="." description="Project folder" />
+	<property name="src.dir" location="src" description="Source folder" />
+	<property name="lib.dir" location="lib" description="Library folder" />
+    <property name="intermediate.dir" location="intermediate" description="Intermediate folder" />
+	<property name="out.dir" location="out" description="Output folder" />
+
+    <property name="version.wp-major" value="1" />
+    <property name="version.wp-minor" value="0" />
+    <tstamp>
+        <format property="version.build" pattern="yyDDD" />
+		<format property="version.revision" pattern="HHmm" />
+    </tstamp>
+
+	<taskdef resource="net/sf/antcontrib/antlib.xml" classpath="${lib.dir}/ant-contrib-0.6.jar" />
+
+	<target name="clean">
+        <delete dir="${intermediate.dir}" />
+	</target>
+
+	<target name="prebuild">
+		<mkdir dir="${out.dir}" />
+	</target>
+
+    <target name="updateVersion">
+        <replace dir="${input.dir}" value="${version.wp-major}.${version.wp-minor}.${version.build}.1${version.revision}">
+            <include name="*.*" />
+            <replacetoken><![CDATA[{wp-major}.{wp-minor}.{build}.{revision}]]></replacetoken>
+        </replace>
+    </target>
+
+    <target name="preprocess">
+        <echo message="Checking ${input.dir}..." />
+        <fail message="index.php missing in ${input.dir}">
+            <condition>
+                <not>
+                    <available file="${input.dir}/index.php" />
+                </not>
+            </condition>
+        </fail>
+
+        <antcall target="updateVersion">
+            <param name="input.dir" value="${input.dir}" />
+        </antcall>
+    </target>
+
+	<target name="bundle">
+        <foreach target="preprocess" param="input.dir" inheritall="true">
+            <path>
+                <dirset dir="${input.dir}">
+                    <include name="**" />
+                </dirset>
+            </path>
+        </foreach>
+
+        <dirname property="base.dir" file="${input.dir}" />
+		<basename property="base.name" file="${input.dir}" />
+		<basename property="type.name" file="${base.dir}" />
+
+        <move file="${input.dir}/updater/${base.name}.json" todir="${project.dir}/updater" />
+        <copy todir="${input.dir}/updater">
+            <fileset dir="${project.dir}/resources/updater" />
+        </copy>
+
+		<zip destfile="${out.dir}/${type.name}/${base.name}.zip" compress="true" level="9" basedir="${base.dir}" includes="${base.name}/**" />
+    </target>
+
+	<target name="package" depends="prebuild">
+        <foreach target="bundle" param="input.dir" inheritall="true" parallel="true">
+			<path>
+				<dirset dir="${input.dir}">
+					<include name="*" />
+				</dirset>
+			</path>
+		</foreach>
+	</target>
+
+	<target name="themes">
+		<echo message="Packaging the themes..." />
+
+        <copy todir="${intermediate.dir}/themes">
+            <fileset dir="${src.dir}/themes" />
+        </copy>
+
+		<antcall target="package">
+			<param name="input.dir" value="${intermediate.dir}/themes" />
+		</antcall>
+
+        <delete dir="${intermediate.dir}/themes" />
+
+		<echo message="Completed packaging the themes." />
+	</target>
+
+	<target name="plugins">
+		<echo message="Packaging the plugins..." />
+
+        <copy todir="${intermediate.dir}/plugins">
+            <fileset dir="${src.dir}/plugins" />
+        </copy>
+
+		<antcall target="package">
+			<param name="input.dir" value="${intermediate.dir}/plugins" />
+		</antcall>
+
+        <delete dir="${intermediate.dir}/plugins" />
+
+        <echo></echo>
+        <echo></echo>
+
+		<echo message="Completed packaging the plugins." />
+	</target>
+
+	<target name="build" depends="clean,themes,plugins" />
+</project>

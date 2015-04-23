@@ -1,0 +1,10 @@
+{
+    "name" : "WordPress Utilities",
+    "slug" : "wp-wordpress-utilities",
+    "download_url" : "http://localhost/repository/wordpress-utilities/out/wp-wordpress-utilities.zip",
+    "version" : "1.0.15113.12030",
+    "author" : "Maarten Kools",
+    "sections" : {
+        "description" : "Provides utilities for WordPress sites"
+    }
+}

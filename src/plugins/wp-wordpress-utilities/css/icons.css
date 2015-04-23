@@ -1,0 +1,180 @@
+/* Font Awesome */
+icon.fa-2 {
+    font-size: 2em;
+}
+
+icon.fa-3 {
+    font-size: 4em;
+}
+
+icon.fa-4 {
+    font-size: 7em;
+}
+
+icon.fa-5 {
+    font-size: 12em;
+}
+
+icon.fa-6 {
+    font-size: 20em;
+}
+
+@media screen and (max-width: 919px) {
+    icon.fa-2 {
+        font-size: 1.1em;
+    }
+
+    icon.fa-3 {
+        font-size: 2.35em;
+    }
+
+    icon.fa-4 {
+        font-size: 4.1em;
+    }
+
+    icon.fa-5 {
+        font-size: 7em;
+    }
+
+    icon.fa-6 {
+        font-size: 11.7em;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    icon.fa-2 {
+        font-size: 0.55em;
+    }
+
+    icon.fa-3 {
+        font-size: 1.1em;
+    }
+
+    icon.fa-4 {
+        font-size: 2.05em;
+    }
+
+    icon.fa-5 {
+        font-size: 3.5em;
+    }
+
+    icon.fa-6 {
+        font-size: 5.85em;
+    }
+}
+
+/* Social media icons */
+icon.social {
+    background-image: url('../images/social-media-52x52.png?version=<wp-major>.<wp-minor>.<build>.<revision>');
+    width: 52px;
+    height: 52px;
+    display: inline-block;
+}
+
+@media screen and (max-width: 919px) {
+    icon.social {
+        background-image: url('../images/social-media-32x32.png?version=<wp-major>.<wp-minor>.<build>.<revision>');
+        width: 32px;
+        height: 32px;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    icon.social {
+        background-image: url('../images/social-media-16x16.png?version=<wp-major>.<wp-minor>.<build>.<revision>');
+        width: 16px;
+        height: 16px;
+    }
+}
+
+icon.social.medium {
+    background-image: url('../images/social-media-32x32.png?version=<wp-major>.<wp-minor>.<build>.<revision>');
+    width: 32px;
+    height: 32px;
+}
+
+icon.social.small {
+    background-image: url('../images/social-media-16x16.png?version=<wp-major>.<wp-minor>.<build>.<revision>');
+    width: 16px;
+    height: 16px;
+}
+
+icon.social.blog {
+    background-position: 0 0;
+}
+
+icon.social.app-store {
+    background-position: -60px 0;
+}
+
+icon.social.foursquare {
+    background-position: -120px 0;
+}
+
+icon.social.dribbble {
+    background-position: -180px 0;
+}
+
+icon.social.facebook {
+    background-position: -240px 0;
+}
+
+icon.social.soundcloud {
+    background-position: 0 -60px;
+}
+
+icon.social.github {
+    background-position: -60px -60px;
+}
+
+icon.social.google-play {
+    background-position: -120px -60px;
+}
+
+icon.social.google-plus {
+    background-position: -180px -60px;
+}
+
+icon.social.instagram {
+    background-position: -240px -60px;
+}
+
+icon.social.linkedin {
+    background-position: 0 -120px;
+}
+
+icon.social.pintrest {
+    background-position: -60px -120px;
+}
+
+icon.social.quora {
+    background-position: -120px -120px;
+}
+
+icon.social.tumblr {
+    background-position: -180px -120px;
+}
+
+icon.social.twitter {
+    background-position: -240px -120px;
+}
+
+icon.social.vimeo {
+    background-position: 0 -180px;
+}
+
+icon.social.vine {
+    background-position: -60px -180px;
+}
+
+icon.social.windows {
+    background-position: -120px -180px;
+}
+
+icon.social.yelp {
+    background-position: -180px -180px;
+}
+
+icon.social.youtube {
+    background-position: -240px -180px;
+}

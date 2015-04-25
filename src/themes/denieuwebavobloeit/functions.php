@@ -59,3 +59,10 @@ function wp_dnbb_after_setup_theme()
 }
 
 add_action('after_setup_theme', 'wp_dnbb_after_setup_theme');
+
+require_once(dirname(__FILE__) . '/updater/plugin-update-checker.php');
+PucFactory::buildUpdateChecker(
+	'https://cdn.rawgit.com/maartenkools/wordpress/master/updater/denieuwebavobloeit.json',
+	__FILE__,
+	'denieuwebavobloeit'
+);

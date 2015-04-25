@@ -3,6 +3,8 @@
     "slug" : "denieuwebavobloeit",
     "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/denieuwebavobloeit.zip",
     "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
+    "requires" : "4.0",
+    "tested": "4.2",
     "author" : "Maarten Kools",
     "sections" : {
         "description" : "Represents the theme for denieuwebavobloeit.nl"

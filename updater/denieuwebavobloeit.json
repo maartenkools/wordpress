@@ -2,7 +2,9 @@
     "name" : "De Nieuwe Bavo bloeit",
     "slug" : "denieuwebavobloeit",
     "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/denieuwebavobloeit.zip",
-    "version" : "1.0.15113.12056",
+    "version" : "1.0.15115.11119",
+    "requires" : "4.0",
+    "tested": "4.2",
     "author" : "Maarten Kools",
     "sections" : {
         "description" : "Represents the theme for denieuwebavobloeit.nl"

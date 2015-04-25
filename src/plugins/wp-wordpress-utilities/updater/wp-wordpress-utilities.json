@@ -3,6 +3,8 @@
     "slug" : "wp-wordpress-utilities",
     "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/plugins/wp-wordpress-utilities.zip",
     "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
+    "requires" : "4.0",
+    "tested": "4.2",
     "author" : "Maarten Kools",
     "sections" : {
         "description" : "Provides utilities for WordPress sites"

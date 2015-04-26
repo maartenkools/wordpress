@@ -1,8 +1,8 @@
 {
     "name" : "WordPress Utilities",
     "slug" : "wp-wordpress-utilities",
-    "download_url" : "https://github.com/maartenkools/wordpress/releases/download/1.0.15116.12241/wp-wordpress-utilities.zip",
-    "version" : "1.0.15116.12241",
+    "download_url" : "https://github.com/maartenkools/wordpress/releases/download/1.0.15116.12303/wp-wordpress-utilities.zip",
+    "version" : "1.0.15116.12303",
     "requires" : "4.0",
     "tested": "4.2",
     "author" : "Maarten Kools",

@@ -112,7 +112,6 @@ class WPU_Plugin
     {
         // Stylesheets
         wp_register_style('font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0');
-	    wp_register_style('bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css', array(), '3.3.4');
 
         wp_register_style('slick', $this->resolveUrl('slick/slick.css'), array(), '1.5.0');
 	    wp_register_style('slick-theme', $this->resolveUrl('slick/slick-theme.css'), array('slick'), '1.5.0');
@@ -120,8 +119,7 @@ class WPU_Plugin
         wp_register_style('icons', $this->resolveUrl('css/icons.css'), array('font-awesome'), $this->get_version());
 
         wp_enqueue_style('wpu-style', $this->resolveUrl('css/style.css'), array(
-	        'bootstrap',
-            'slick-theme',
+	        'slick-theme',
             'lightbox',
             'icons'
         ), $this->get_version());

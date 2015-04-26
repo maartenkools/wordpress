@@ -84,14 +84,12 @@ class WPU_Gallery {
 			$img = $dom->createElement( 'img' );
 			$a->appendChild( $img );
 			$img->setAttribute( 'src', $src[0] );
-			$img->setAttribute( 'style', 'max-width: ' . $dimensions[0] . 'px; max-height: ' . $dimensions[1] . 'px;' );
+			$img->setAttribute( 'width', $dimensions[0] );
+			$img->setAttribute( 'height', $dimensions[1] );
+			$img->setAttribute( 'class', 'img-responsive' );
 			if ( ! empty( $alt ) ) {
 				$img->setAttribute( 'alt', $alt );
 			}
-
-			//$overlay = $dom->createElement( 'div' );
-			//$overlay->setAttribute( 'class', 'image-overlay' );
-			//$a->appendChild( $overlay );
 		}
 
 		return count( $images );

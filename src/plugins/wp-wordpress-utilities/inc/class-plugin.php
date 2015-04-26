@@ -37,7 +37,7 @@ class WPU_Plugin
         }
 
         PucFactory::buildUpdateChecker(
-            'https://github.com/maartenkools/wordpress/releases/download/{wp-major}.{wp-minor}.{build}.{revision}/wp-wordpress-utilities.json',
+            'https://raw.githubusercontent.com/maartenkools/wordpress/master/updater/wp-wordpress-utilities.json',
             $this->file,
             'wp-wordpress-utilities'
         );

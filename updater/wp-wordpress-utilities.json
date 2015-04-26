@@ -1,8 +1,8 @@
 {
     "name" : "WordPress Utilities",
     "slug" : "wp-wordpress-utilities",
-    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/plugins/wp-wordpress-utilities.zip",
-    "version" : "1.0.15116.12132",
+    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/1.0.15116.12205/out/plugins/wp-wordpress-utilities.zip",
+    "version" : "1.0.15116.12205",
     "requires" : "4.0",
     "tested": "4.2",
     "author" : "Maarten Kools",

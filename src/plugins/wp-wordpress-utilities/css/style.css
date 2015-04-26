@@ -1,13 +1,35 @@
 .slick-slider {
     margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slick-slide {
     position: relative;
 }
 
-.slick-slide > a {
-    display: block;
+.slick-slide:after {
+    content:'\A';
+    position: absolute;
+    width:100%; height:100%;
+    top:0; left:0;
+    background-color: rgba(51, 51, 51, 0.5);
+    background-image: url('../images/zoomin.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+    pointer-events: none;
+}
+
+.slick-slide:hover:after {
+    opacity:1;
+}
+
+.slick-slide img {
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hentry ul.slick-dots {
@@ -21,26 +43,7 @@
     color: #333333;
 }
 
-.image-overlay {
-    position: absolute;
-    background-color: #333333;
-    background-image: url('../images/zoomin.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    opacity: 0.01;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=1);
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=1);
-    filter: alpha(opacity=1);
-}
-
-.image-overlay:hover {
-    cursor: pointer;
-    opacity: 0.5;
-    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha"(Opacity=50);
-    filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
-    filter: alpha(opacity=50);
-}
-
 .wpu-gallery.hidden {
     display: none;
 }
+

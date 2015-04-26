@@ -113,25 +113,24 @@ class WPU_Plugin
         // Stylesheets
         wp_register_style('font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css', array(), '4.3.0');
 
-        wp_register_style('slick', $this->resolveUrl('slick/slick.css'), array(), $this->get_version());
-        wp_register_style('lightbox', $this->resolveUrl('lightbox/lightbox.css'), array(), $this->get_version());
+        wp_register_style('slick', $this->resolveUrl('slick/slick.css'), array(), '1.5.0');
+	    wp_register_style('slick-theme', $this->resolveUrl('slick/slick-theme.css'), array('slick'), '1.5.0');
+        wp_register_style('lightbox', $this->resolveUrl('lightbox/lightbox.css'), array(), '2.7.1');
         wp_register_style('icons', $this->resolveUrl('css/icons.css'), array('font-awesome'), $this->get_version());
 
         wp_enqueue_style('wpu-style', $this->resolveUrl('css/style.css'), array(
-            'slick',
+            'slick-theme',
             'lightbox',
             'icons'
         ), $this->get_version());
 
         // Scripts
-        wp_register_script('slick', $this->resolveUrl('slick/slick.min.js'), array('jquery'), $this->get_version());
-        wp_register_script('jquery.centertoparent', $this->resolveUrl('js/jquery.centertoparent.min.js'), array('jquery'), $this->get_version());
-        wp_register_script('lightbox', $this->resolveUrl('lightbox/lightbox.min.js'), array('jquery'), $this->get_version());
+        wp_register_script('slick', $this->resolveUrl('slick/slick.min.js'), array('jquery'), '1.5.0');
+        wp_register_script('lightbox', $this->resolveUrl('lightbox/lightbox.min.js'), array('jquery'), '2.7.1');
 
         wp_register_script('wpu-gallery', $this->resolveUrl('js/gallery.min.js'), array(
             'jquery',
             'slick',
-            'jquery.centertoparent',
             'lightbox'
         ), $this->get_version());
 
@@ -206,7 +205,7 @@ class WPU_Plugin
      */
     public function get_version()
     {
-        return '<wp-major>.<wp-minor>.<build>.<revision>';
+        return '{wp-major}.{wp-minor}.{build}.{revision}';
     }
 
     /**

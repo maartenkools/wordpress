@@ -10,18 +10,21 @@ class WPU_Gallery {
 	private static $cssClass = 'wpu-gallery';
 
 	public static function render( $params ) {
+		$options = WPU_Plugin::current()->get_options();
+
 		$params = shortcode_atts( array(
 			'tag'        => 'div',
 			'cssClass'   => '',
 			'randomize'  => false,
-			'max_width'  => - 1,
-			'max_height' => - 1
+			'max_width'  => $options->getValue( 'gallery', 'max_width' ),
+			'max_height' => $options->getValue( 'gallery', 'max_height' )
 		), $params );
 
 		$post = ( isset( $GLOBALS['post'] ) ? $GLOBALS['post'] : null );
 
 		$dom  = new DOMDocument();
 		$root = $dom->createElement( $params['tag'] );
+		$root->setAttribute( 'style', 'max-width: ' . $params['max_width'] . 'px; max-height: ' . $params['max_height'] . 'px;' );
 		$dom->appendChild( $root );
 
 		$count = self::__renderChildren( $post, $dom, $params );
@@ -43,14 +46,6 @@ class WPU_Gallery {
 		}
 
 		$root = $dom->childNodes->item( 0 );
-
-		$options = WPU_Plugin::current()->get_options();
-		if ( $params['max_width'] < 0 ) {
-			$params['max_width'] = $options->getValue( 'gallery', 'max_width' );
-		}
-		if ( $params['max_height'] < 0 ) {
-			$params['max_height'] = $options->getValue( 'gallery', 'max_height' );
-		}
 
 		$maxDimensions = array(
 			$params['max_width'],
@@ -89,14 +84,14 @@ class WPU_Gallery {
 			$img = $dom->createElement( 'img' );
 			$a->appendChild( $img );
 			$img->setAttribute( 'src', $src[0] );
-			$img->setAttribute( 'style', 'width: ' . $dimensions[0] . 'px; height: ' . $dimensions[1] . 'px;' );
+			$img->setAttribute( 'style', 'max-width: ' . $dimensions[0] . 'px; max-height: ' . $dimensions[1] . 'px;' );
 			if ( ! empty( $alt ) ) {
 				$img->setAttribute( 'alt', $alt );
 			}
 
-			$overlay = $dom->createElement( 'div' );
-			$overlay->setAttribute( 'class', 'image-overlay' );
-			$a->appendChild( $overlay );
+			//$overlay = $dom->createElement( 'div' );
+			//$overlay->setAttribute( 'class', 'image-overlay' );
+			//$a->appendChild( $overlay );
 		}
 
 		return count( $images );

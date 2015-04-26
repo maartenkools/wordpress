@@ -10,6 +10,7 @@
 	<property name="lib.dir" location="lib" description="Library folder" />
     <property name="intermediate.dir" location="intermediate" description="Intermediate folder" />
 	<property name="out.dir" location="out" description="Output folder" />
+    <property name="updater.dir" location="updater" description="Updater folder" />
 
     <property name="version.wp-major" value="1" />
     <property name="version.wp-minor" value="0" />
@@ -63,9 +64,9 @@
 		<basename property="base.name" file="${input.dir}" />
 		<basename property="type.name" file="${base.dir}" />
 
-        <move file="${input.dir}/updater/${base.name}.json" todir="${out.dir}" />
+        <move file="${input.dir}/updater/${base.name}.json" todir="${updater.dir}" />
         <copy todir="${input.dir}/updater">
-            <fileset dir="${project.dir}/resources/updater" />
+            <fileset dir="${project.dir}/resources/${type.name}-updater" />
         </copy>
 
 		<zip destfile="${out.dir}/${base.name}.zip" compress="true" level="9" basedir="${base.dir}" includes="${base.name}/**" />

@@ -63,12 +63,12 @@
 		<basename property="base.name" file="${input.dir}" />
 		<basename property="type.name" file="${base.dir}" />
 
-        <move file="${input.dir}/updater/${base.name}.json" todir="${project.dir}/updater" />
+        <move file="${input.dir}/updater/${base.name}.json" todir="${out.dir}" />
         <copy todir="${input.dir}/updater">
             <fileset dir="${project.dir}/resources/updater" />
         </copy>
 
-		<zip destfile="${out.dir}/${type.name}/${base.name}.zip" compress="true" level="9" basedir="${base.dir}" includes="${base.name}/**" />
+		<zip destfile="${out.dir}/${base.name}.zip" compress="true" level="9" basedir="${base.dir}" includes="${base.name}/**" />
     </target>
 
 	<target name="package" depends="prebuild">

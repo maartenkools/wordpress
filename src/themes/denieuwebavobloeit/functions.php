@@ -58,7 +58,7 @@ function wp_dnbb_after_setup_theme() {
 
 add_action( 'after_setup_theme', 'wp_dnbb_after_setup_theme' );
 
-require_once( dirname( __FILE__ ) . 'updater/theme-update-checker.php' );
+require_once( dirname( __FILE__ ) . '/updater/theme-update-checker.php' );
 $updateChecker = new ThemeUpdateChecker(
 	'denieuwebavobloeit',
 	'https://raw.githubusercontent.com/maartenkools/wordpress/master/updater/denieuwebavobloeit.json'

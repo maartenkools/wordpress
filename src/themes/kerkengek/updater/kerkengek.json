@@ -1,13 +1,13 @@
 {
-    "name" : "Kerkengek",
-    "slug" : "kerkengek",
-    "download_url" : "https://github.com/maartenkools/wordpress/releases/download/{wp-major}.{wp-minor}.{build}.{revision}/kerkengek.zip",
+    "name": "Kerkengek",
+    "slug": "kerkengek",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/{wp-major}.{wp-minor}.{build}.{revision}/kerkengek.zip",
     "details_url": "https://github.com/maartenkools/wordpress/releases/tag/{wp-major}.{wp-minor}.{build}.{revision}",
-    "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
-    "requires" : "4.0",
+    "version": "{wp-major}.{wp-minor}.{build}.{revision}",
+    "requires": "4.0",
     "tested": "4.2",
-    "author" : "Maarten Kools",
-    "sections" : {
-        "description" : "Represents the theme for kerkengek.nl"
+    "author": "Maarten Kools",
+    "sections": {
+        "description": "Represents the theme for kerkengek.nl"
     }
 }

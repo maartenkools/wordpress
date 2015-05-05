@@ -15,8 +15,8 @@ function kerkengek_enqueue_scripts()
 
 add_action('wp_enqueue_scripts', 'kerkengek_enqueue_scripts', PHP_INT_MAX);
 
-require 'updater/theme-update-checker.php';
-$example_update_checker = new ThemeUpdateChecker(
+require_once(dirname(__FILE__) . 'updater/theme-update-checker.php');
+$updateChecker = new ThemeUpdateChecker(
 	'kerkengek',
 	'https://raw.githubusercontent.com/maartenkools/wordpress/master/updater/kerkengek.json'
 );

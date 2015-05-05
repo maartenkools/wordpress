@@ -1,12 +1,13 @@
 {
-    "name" : "De Nieuwe Bavo bloeit",
-    "slug" : "denieuwebavobloeit",
-    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/denieuwebavobloeit.zip",
-    "version" : "{wp-major}.{wp-minor}.{build}.{revision}",
-    "requires" : "4.0",
+    "name": "De Nieuwe Bavo bloeit",
+    "slug": "denieuwebavobloeit",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/{wp-major}.{wp-minor}.{build}.{revision}/denieuwebavobloeit.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/{wp-major}.{wp-minor}.{build}.{revision}",
+    "version": "{wp-major}.{wp-minor}.{build}.{revision}",
+    "requires": "4.0",
     "tested": "4.2",
-    "author" : "Maarten Kools",
-    "sections" : {
-        "description" : "Represents the theme for denieuwebavobloeit.nl"
+    "author": "Maarten Kools",
+    "sections": {
+        "description": "Represents the theme for denieuwebavobloeit.nl"
     }
 }

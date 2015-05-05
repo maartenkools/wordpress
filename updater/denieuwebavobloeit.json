@@ -1,0 +1,13 @@
+{
+    "name": "De Nieuwe Bavo bloeit",
+    "slug": "denieuwebavobloeit",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.15125.12130/denieuwebavobloeit.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.15125.12130",
+    "version": "1.0.15125.12130",
+    "requires": "4.0",
+    "tested": "4.2",
+    "author": "Maarten Kools",
+    "sections": {
+        "description": "Represents the theme for denieuwebavobloeit.nl"
+    }
+}

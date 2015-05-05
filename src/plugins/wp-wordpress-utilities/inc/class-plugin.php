@@ -141,8 +141,8 @@ class WPU_Plugin
         wp_enqueue_script('wpu-plugin');
 
         // Script localizations/settings
-        wp_localize_script('wpu-gallery', 'settings', array(
-            'autoplaySpeed' => $this->get_options()->getValue('gallery', 'autoplay_speed')
+        wp_localize_script('wpu-plugin', 'settings', array(
+            'enableLightbox' => $this->get_options()->getValue('general', 'enable_lightbox')
         ));
 
         do_action('wpu_enqueue_scripts');

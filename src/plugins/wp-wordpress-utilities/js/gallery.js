@@ -1,11 +1,15 @@
 (function (jQuery) {
     jQuery(document).ready(function () {
-        jQuery('.wpu-gallery').slick({
+        var jElement = jQuery('.wpu-gallery');
+
+        var autoplaySpeed = jElement.attr('data-autoplayspeed');
+
+        jElement.slick({
             dots: true,
             adaptiveHeight: true,
             infinite: true,
-            autoplay: settings.autoplaySpeed > 0,
-            autoplaySpeed: settings.autoplaySpeed
+            autoplay: autoplaySpeed > 0,
+            autoplaySpeed: autoplaySpeed
         });
     });
 })(jQuery);

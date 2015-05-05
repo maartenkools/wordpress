@@ -90,7 +90,14 @@ class WPU_Options
                     'description' => __('Enables the debug mode for the plugin.', WPU_Plugin::$textDomain),
                     'type' => WPU_DataType::Checkbox,
                     'default' => false
-                )
+                ),
+	            array(
+		            'name' => 'enable_lightbox',
+		            'label' => __('Enabled lightbox', WPU_Plugin::$textDomain),
+		            'description' => __('Images that link to the original will be displayed in a lightbox.', WPU_Plugin::$textDomain),
+		            'type' => WPU_DataType::Checkbox,
+		            'default' => false
+	            )
             )
         );
 

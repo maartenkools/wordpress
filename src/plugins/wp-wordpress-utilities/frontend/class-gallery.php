@@ -17,7 +17,8 @@ class WPU_Gallery {
 			'cssClass'   => '',
 			'randomize'  => false,
 			'max_width'  => $options->getValue( 'gallery', 'max_width' ),
-			'max_height' => $options->getValue( 'gallery', 'max_height' )
+			'max_height' => $options->getValue( 'gallery', 'max_height' ),
+			'autoplay_speed' => $options->getValue( 'gallery', 'autoplay_speed' )
 		), $params );
 
 		$post = ( isset( $GLOBALS['post'] ) ? $GLOBALS['post'] : null );
@@ -36,6 +37,8 @@ class WPU_Gallery {
 		}
 
 		$root->setAttribute( 'class', implode( ' ', $classes ) );
+
+		$root->setAttribute('data-autoplayspeed', $params['autoplay_speed']);
 
 		return $dom->saveHTML();
 	}

@@ -13,11 +13,11 @@ class WPU_Gallery {
 		$options = WPU_Plugin::current()->get_options();
 
 		$params = shortcode_atts( array(
-			'tag'        => 'div',
-			'cssClass'   => '',
-			'randomize'  => false,
-			'max_width'  => $options->getValue( 'gallery', 'max_width' ),
-			'max_height' => $options->getValue( 'gallery', 'max_height' ),
+			'tag'            => 'div',
+			'cssClass'       => '',
+			'randomize'      => false,
+			'max_width'      => $options->getValue( 'gallery', 'max_width' ),
+			'max_height'     => $options->getValue( 'gallery', 'max_height' ),
 			'autoplay_speed' => $options->getValue( 'gallery', 'autoplay_speed' )
 		), $params );
 
@@ -38,7 +38,7 @@ class WPU_Gallery {
 
 		$root->setAttribute( 'class', implode( ' ', $classes ) );
 
-		$root->setAttribute('data-autoplayspeed', $params['autoplay_speed']);
+		$root->setAttribute( 'data-autoplayspeed', $params['autoplay_speed'] );
 
 		return $dom->saveHTML();
 	}
@@ -54,6 +54,8 @@ class WPU_Gallery {
 			$params['max_width'],
 			$params['max_height']
 		);
+
+		$revision = get_post_modified_time( 'YmdHis', true, $post, false );
 
 		$images = self::__queryImages( $post->ID, $params['randomize'] );
 		foreach ( $images as $image ) {
@@ -78,7 +80,7 @@ class WPU_Gallery {
 			if ( ! empty( $caption ) ) {
 				$a->setAttribute( 'data-title', $caption );
 			}
-			$a->setAttribute( 'href', wp_get_attachment_url( $attachmentId ) );
+			$a->setAttribute( 'href', wp_get_attachment_url( $attachmentId ) . '?v=' . $revision );
 
 			$src = wp_get_attachment_image_src( $attachmentId, $maxDimensions );
 
@@ -86,7 +88,7 @@ class WPU_Gallery {
 
 			$img = $dom->createElement( 'img' );
 			$a->appendChild( $img );
-			$img->setAttribute( 'src', $src[0] );
+			$img->setAttribute( 'src', $src[0] . '?v=' . $revision );
 			$img->setAttribute( 'width', $dimensions[0] );
 			$img->setAttribute( 'height', $dimensions[1] );
 			$img->setAttribute( 'class', 'img-responsive' );

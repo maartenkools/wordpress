@@ -1,11 +1,11 @@
 {
     "name" : "WordPress Utilities",
     "slug" : "wp-wordpress-utilities",
-    "download_url" : "https://github.com/maartenkools/wordpress/releases/download/1.0.15125.12130/wp-wordpress-utilities.zip",
-    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.15125.12130",
-    "version" : "1.0.15125.12130",
+    "download_url" : "https://github.com/maartenkools/wordpress/releases/download/1.0.15128.12031/wp-wordpress-utilities.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.15128.12031",
+    "version" : "1.0.15128.12031",
     "requires" : "4.0",
-    "tested": "4.2",
+    "tested": "4.2.2",
     "author" : "Maarten Kools",
     "sections" : {
         "description" : "Provides utilities for WordPress sites"

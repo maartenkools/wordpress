@@ -15,7 +15,7 @@ class WPU_Gallery {
 		$params = shortcode_atts( array(
 			'tag'            => 'div',
 			'cssClass'       => '',
-			'randomize'      => false,
+			'randomize'      => $options->getValue( 'gallery', 'randomize' ),
 			'max_width'      => $options->getValue( 'gallery', 'max_width' ),
 			'max_height'     => $options->getValue( 'gallery', 'max_height' ),
 			'autoplay_speed' => $options->getValue( 'gallery', 'autoplay_speed' )
@@ -57,7 +57,7 @@ class WPU_Gallery {
 
 		$revision = get_post_modified_time( 'YmdHis', true, $post, false );
 
-		$images = self::__queryImages( $post->ID, $params['randomize'] );
+		$images = self::__queryImages( $params['randomize'] );
 		foreach ( $images as $image ) {
 			$attachmentId = null;
 			$caption      = null;

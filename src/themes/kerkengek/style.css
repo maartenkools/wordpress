@@ -72,3 +72,7 @@
 .site-info {
 	display: none;
 }
+
+.broken_link, a.broken_link {
+	text-decoration: none !important;
+}

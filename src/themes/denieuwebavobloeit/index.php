@@ -645,8 +645,8 @@ $aside          = 'both-aside';
  
  
  
- $section_title_typography    = onetone_option( 'section_title_typography_'.$i,isset($default_options[$i]['section_title_typography'])?$default_options[$i]['section_title_typography']:'');
- $title_typography            = onetone_get_typography( $section_title_typography );
+ $section_title_typography    = ''; //onetone_option( 'section_title_typography_'.$i,isset($default_options[$i]['section_title_typography'])?$default_options[$i]['section_title_typography']:'');
+ $title_typography            = ''; //onetone_get_typography( $section_title_typography );
  
  $section_content_typography  = ''; // onetone_option( 'section_content_typography_'.$i,isset($default_options[$i]['section_content_typography'])?$default_options[$i]['section_content_typography']:'');
  $content_typography          = ''; //onetone_get_typography( $section_content_typography );

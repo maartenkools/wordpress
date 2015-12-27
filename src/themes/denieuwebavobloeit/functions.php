@@ -18,17 +18,17 @@ function wp_dnbb_enqueue_styles() {
 			$header_color = ' color:#' . get_header_textcolor() . ';';
 			$onetone_custom_css .= '.home-header,.site-name,.site-description{' . $header_color . '}';
 		}
-		$custom_css = onetone_options_array( "custom_css" );
+		$custom_css = onetone_option( "custom_css" );
 		$onetone_custom_css .= '.site{' . $background . '}';
 
-		$links_color = onetone_options_array( 'links_color' );
+		$links_color = onetone_option( 'links_color' );
 		if ( $links_color == "" || $links_color == null ) {
 			$links_color = "#963";
 		}
 
 		$onetone_custom_css .= 'a,.site-logo a:hover,.site-navigation a:hover,.widget a:hover,.entry-title a:hover,.entry-meta a:hover,.loop-pagination a:hover,.page_navi a:hover,.site-footer a:hover,.home-navigation > ul > li.current > a > span,.home-navigation > ul > li.current-menu-item > a > span,.home-navigation li a:hover,.home-navigation li.current a,.home-navigation li.current-menu-item a,.home-footer a:hover,#back-to-top,#back-to-top span{color:' . $links_color . ';}#back-to-top {border:1px solid ' . $links_color . ';}mark,ins,.widget #wp-calendar #today{background:' . $links_color . '; }::selection{background:' . $links_color . ' !important;}::-moz-selection{background:' . $links_color . ' !important;}';
 
-		$top_menu_font_color = onetone_options_array( 'font_color' );
+		$top_menu_font_color = onetone_option( 'font_color' );
 		if ( $top_menu_font_color != "" && $top_menu_font_color != null ) {
 			$onetone_custom_css .= 'header #menu-main > li > a span,header .top-nav > ul > li > a span{color:' . $top_menu_font_color . '}';
 		}

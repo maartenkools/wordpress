@@ -26,8 +26,8 @@ $cssClass = $wp_query->is_404
     <header class="home-header">
         <div class="home-logo onetone-logo ">
             <a href="<?php echo esc_url(home_url('/')); ?>">
-                <?php if (onetone_options_array('logo') != "") { ?>
-                    <img src="<?php echo onetone_options_array('logo'); ?>" alt="<?php bloginfo('name'); ?>"/>
+                <?php if (onetone_option('logo') != "") { ?>
+                    <img src="<?php echo onetone_option('logo'); ?>" alt="<?php bloginfo('name'); ?>"/>
                 <?php } else { ?>
                     <span class="site-name">
         <?php bloginfo('name'); ?>
@@ -44,16 +44,16 @@ $cssClass = $wp_query->is_404
             <?php
 
             $onepage_menu = '';
-            $section_num = onetone_options_array('section_num');
+            $section_num = onetone_option('section_num');
             if (isset($section_num) && is_numeric($section_num) && $section_num > 0):
                 for ($i = 0; $i < $section_num; $i++) {
 
-                    $section_menu = onetone_options_array('menu_title_' . $i);
-                    $section_slug = onetone_options_array('menu_slug_' . $i);
+                    $section_menu = onetone_option('menu_title_' . $i);
+                    $section_slug = onetone_option('menu_slug_' . $i);
 
                     if (isset($section_menu) && $section_menu != "") {
                         $sanitize_title = sanitize_title($section_menu);
-                        $section_menu = onetone_options_array('menu_title_' . $i);
+                        $section_menu = onetone_option('menu_title_' . $i);
                         if (trim($section_slug) != "") {
                             $sanitize_title = $section_slug;
                         }

@@ -7,7 +7,7 @@
  */
 get_header('site');
 
-$section_background = onetone_options_array('section_background_0');
+$section_background = onetone_option('section_background_0');
 $background = onetone_get_background($section_background);
 
 $background .= 'background-attachment:fixed;-webkit-background-size:cover;-moz-background-size:cover;-o-background-size:cover;background-size:cover;';

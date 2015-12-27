@@ -5,7 +5,7 @@
     "details_url": "https://github.com/maartenkools/wordpress/releases/tag/{wp-major}.{wp-minor}.{build}.{revision}",
     "version": "{wp-major}.{wp-minor}.{build}.{revision}",
     "requires": "4.0",
-    "tested": "4.2",
+    "tested": "4.4",
     "author": "Maarten Kools",
     "sections": {
         "description": "Represents the theme for denieuwebavobloeit.nl"

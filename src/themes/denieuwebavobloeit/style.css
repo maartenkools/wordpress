@@ -49,10 +49,6 @@ body {
     text-indent: 99999px;
 }
 
-.section-banner {
-    padding: 0;
-}
-
 .section-banner,
 .section-banner .banner-scroll a,
 .banner-sns li a icon,
@@ -63,7 +59,7 @@ body {
 .section-banner h1,
 .section-banner span, .section-banner .sub-title {
     font-family: 'Oleo Script', cursive;
-    background-color: rgb(255,255,255,0.4);
+    background-color: rgba(255,255,255,0.4);
     color: #008555;
 }
 
@@ -113,6 +109,10 @@ body {
 
 section.section {
     padding: 20px 0;
+}
+
+.section.section.section-banner {
+    padding: 0;
 }
 
 section.section:not(:first-of-type) {

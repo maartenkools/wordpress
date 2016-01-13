@@ -8,11 +8,14 @@
  Text Domain: denieuwebavobloeit
 */
 @import url(http://fonts.googleapis.com/css?family=Lato);
-@import url(css/pagebuilder.css);
-
-body,
 .section-banner h1,
 .section-banner span, .section-banner .sub-title {
+    background-color: rgb(255,255,255,0.4);
+    color: #008555;
+}
+@import url(css/pagebuilder.css);
+
+body {
     font-family: 'Lato', sans-serif;
     -webkit-font-smoothing: antialiased;
 }
@@ -46,24 +49,27 @@ body,
     text-indent: 99999px;
 }
 
+.section-banner {
+    padding: 0;
+}
+
 .section-banner,
-.section-banner h1,
-.section-banner .sub-title,
 .section-banner .banner-scroll a,
 .banner-sns li a icon,
 .section-banner a {
     color: #ffffff;
 }
 
+.section-banner h1,
+.section-banner span, .section-banner .sub-title {
+    font-family: 'Oleo Script', cursive;
+    background-color: rgb(255,255,255,0.4);
+    color: #008555;
+}
+
 .section-banner icon {
     -webkit-text-stroke: 1px #333333;
     text-shadow: 3px 3px 0 #333333, -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
-}
-
-.section-banner,
-.section-banner h1,
-.section-banner .sub-title {
-    background-color: rgba(102, 102, 102, 0.4);
 }
 
 .banner-box span,

@@ -8,6 +8,8 @@
  Text Domain: denieuwebavobloeit
 */
 @import url(http://fonts.googleapis.com/css?family=Lato);
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script);
+
 .section-banner h1,
 .section-banner span, .section-banner .sub-title {
     background-color: rgb(255,255,255,0.4);
@@ -58,7 +60,7 @@ body {
 
 .section-banner h1,
 .section-banner span, .section-banner .sub-title {
-    font-family: 'Oleo Script', cursive;
+    font-family: 'Oleo Script';
     background-color: rgba(255,255,255,0.4);
     color: #008555;
 }

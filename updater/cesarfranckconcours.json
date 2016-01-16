@@ -1,0 +1,13 @@
+{
+    "name": "Cesár Franck Concours",
+    "slug": "cesarfranckconcours",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16016.11511/cesarfranckconcours.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16016.11511",
+    "version": "1.0.16016.11511",
+    "requires": "4.0",
+    "tested": "4.4",
+    "author": "Maarten Kools",
+    "sections": {
+        "description": "Represents the theme for the International Cesár Franck Competition"
+    }
+}

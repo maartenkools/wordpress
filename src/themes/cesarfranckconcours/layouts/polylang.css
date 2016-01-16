@@ -1,0 +1,14 @@
+.install_flags_notice > div {
+    display: flex;
+    align-items: center;
+}
+
+.install_flags_notice .spinner {
+    float: none;
+}
+
+.install_flags_notice a.processing {
+    text-decoration: none;
+    color: #444;
+    pointer-events: none;
+}

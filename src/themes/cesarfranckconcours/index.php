@@ -40,8 +40,6 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
-
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );

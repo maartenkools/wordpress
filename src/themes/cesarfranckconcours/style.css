@@ -116,7 +116,7 @@ dfn {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 1.5em;
 	margin: 0.67em 0;
 }
 
@@ -293,6 +293,7 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+    margin-top: 0;
 }
 
 dfn,
@@ -385,7 +386,7 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 1.5em 1em;
 }
 
 ul {
@@ -930,16 +931,112 @@ object {
 }
 
 /*--------------------------------------------------------------
-# Post specific styles
+# Additional styling
 --------------------------------------------------------------*/
 
-.concours td,
-.organisation td {
+body,
+button,
+input,
+select,
+textarea {
+    font-size: 13px;
+    font-size: 0.8rem;
+}
+
+body {
+    background-color: #999;
+}
+
+#page {
+    max-width: 800px;
+    margin: 0 auto 0 auto;
+}
+
+.main-navigation {
+    background-color: #f00;
+    color: #fff;
+}
+
+.menu-item {
+    margin-left: 1em;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+}
+
+.menu-item a {
+    color: #fff;
+}
+
+.menu-item img {
+    border: 1px solid #fff;
+}
+
+.current-menu-item {
+    /* TODO */
+}
+
+.menu-item img,
+.site-branding > img {
+    display: block;
+}
+
+header {
+    -webkit-box-shadow: 0 0 5px 0 rgba(40, 40, 40, 0.75);
+    -moz-box-shadow: 0 0 5px 0 rgba(40, 40, 40, 0.75);
+    box-shadow: 0 0 5px 0 rgba(40, 40, 40, 0.75);
+}
+
+.site-footer {
+    background-color: #f00;
+    color: #fff;
+    padding-left: 1em;
+
+    -webkit-box-shadow: 0 6px 5px 0 rgba(40, 40, 40, 0.75);
+    -moz-box-shadow: 0 6px 5px 0 rgba(40, 40, 40, 0.75);
+    box-shadow: 0 6px 5px 0 rgba(40, 40, 40, 0.75);
+}
+
+.site-content {
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 5px 0 rgba(40, 40, 40, 0.75);
+    -moz-box-shadow: 0 0 5px 0 rgba(40, 40, 40, 0.75);
+    box-shadow: 0 0 5px 0 rgba(40, 40, 40, 0.75);
+
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.entry-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+td,
+td {
     vertical-align: top;
 }
 
-.concours td:first-child,
-.organisation td:first-child {
+table:not(.organ) td:first-of-type {
     text-align: right;
     padding-right: 1em;
+}
+
+table:not(.organ) td:first-of-type {
+    width: 120px
+}
+
+table:not(.organ) td:last-of-type {
+    width: 520px;
+}
+
+table.organ {
+    width: 75%;
+}
+
+table.organ td {
+    width: 33%;
 }

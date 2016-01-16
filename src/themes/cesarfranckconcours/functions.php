@@ -65,6 +65,8 @@ if ( ! function_exists( 'cesarfranckconcours_setup' ) ) : /**
 			'default-color' => 'fafafa',
 			'default-image' => '',
 		) ) );
+
+		add_editor_style(get_stylesheet_directory_uri() . '/layouts/editor.css');
 	}
 }
 endif;
@@ -128,6 +130,13 @@ function cesarfranckconcours_scripts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'cesarfranckconcours_scripts' );
+
+function cesarfranckconcours_autocopyright($year) {
+	$current_year = date('Y');
+
+	if (intval($year) < $current_year) return intval($year) . ' - ' . $current_year;
+	return '' . $current_year;
+}
 
 /**
  * Implement the Custom Header feature.

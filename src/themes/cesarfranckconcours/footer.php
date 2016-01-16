@@ -9,15 +9,15 @@
  * @package cesarfranckconcours
  */
 
+$current_year = date('Y');
+
 ?>
 
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'cesarfranckconcours' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'cesarfranckconcours' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'cesarfranckconcours' ), 'cesarfranckconcours', '<a href="http://underscores.me/" rel="designer">Underscores.me</a>' ); ?>
+			Copyright &copy; <?php echo cesarfranckconcours_autocopyright(2016); ?> <?php echo bloginfo('name'); ?>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 </div><!-- #page -->

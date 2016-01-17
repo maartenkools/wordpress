@@ -1,9 +1,9 @@
 {
     "name": "Cesár Franck Concours",
     "slug": "cesarfranckconcours",
-    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16016.11758/cesarfranckconcours.zip",
-    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16016.11758",
-    "version": "1.0.16016.11758",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16017.12044/cesarfranckconcours.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16017.12044",
+    "version": "1.0.16017.12044",
     "requires": "4.0",
     "tested": "4.4",
     "author": "Maarten Kools",

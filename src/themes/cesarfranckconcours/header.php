@@ -30,9 +30,12 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'cesarfranckconcours' ); ?></button>
+			<div class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"></div>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
+		<nav id="lang-navigation" class="lang-navigation" role="navigation">
+			<ul><?php pll_the_languages(array("show_flags"=> true, "show_names" => false)); ?></ul>
+		</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

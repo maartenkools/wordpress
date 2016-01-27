@@ -135,6 +135,10 @@ section.section:not(:last-of-type) {
     box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.entry-category, .entry-author {
+    display: none;
+}
+
 /* 404 page styles */
 html.error404 {
     height: 100%;

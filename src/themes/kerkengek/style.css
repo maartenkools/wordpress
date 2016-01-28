@@ -76,3 +76,15 @@
 .broken_link, a.broken_link {
 	text-decoration: none !important;
 }
+
+.navigation-main {
+    display: flex;
+}
+
+.menu-main-menu-container {
+    width: 100%;
+}
+
+.widget-handle {
+    margin-left: 1em;
+}

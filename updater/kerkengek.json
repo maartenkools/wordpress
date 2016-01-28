@@ -1,9 +1,9 @@
 {
     "name": "Kerkengek",
     "slug": "kerkengek",
-    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16028.12208/kerkengek.zip",
-    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16028.12208",
-    "version": "1.0.16028.12208",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16028.12308/kerkengek.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16028.12308",
+    "version": "1.0.16028.12308",
     "requires": "4.0",
     "tested": "4.4",
     "author": "Maarten Kools",

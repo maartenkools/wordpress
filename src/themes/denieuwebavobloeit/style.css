@@ -333,8 +333,8 @@ body.error404 {
 }
 
 .jsn-bootstrap3 .wr-list-icons.wr-shape-circle.wr-icon-16 .wr-icon-base, .jsn-bootstrap3 .wr-list-icons.wr-shape-square.wr-icon-16 .wr-icon-base {
-    width: 20px;
-    height: 20px;
+    width: 20px !important;
+    height: 20px !important;
     margin-top: 20px;
 }
 

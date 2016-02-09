@@ -331,3 +331,13 @@ body.error404 {
         float: left;
     }
 }
+
+.jsn-bootstrap3 .wr-list-icons.wr-shape-circle.wr-icon-16 .wr-icon-base, .jsn-bootstrap3 .wr-list-icons.wr-shape-square.wr-icon-16 .wr-icon-base {
+    width: 20px;
+    height: 20px;
+    margin-top: 20px;
+}
+
+.wr-icon-base {
+    background-color: #008555 !important;
+}

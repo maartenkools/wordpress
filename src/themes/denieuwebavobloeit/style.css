@@ -76,6 +76,10 @@ body {
     text-shadow: 3px 3px 0 #333333, -1px -1px 0 #333333, 1px -1px 0 #333333, -1px 1px 0 #333333, 1px 1px 0 #333333;
 }
 
+.banner-box {
+    text-align: initial;
+}
+
 .banner-box span,
 .banner-box .sub-title {
     font-size: 32px;

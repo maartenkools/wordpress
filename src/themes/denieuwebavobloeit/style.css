@@ -139,6 +139,20 @@ section.section:not(:last-of-type) {
     box-shadow: 0px 6px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.portfolio-list ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.portfolio-list li {
+    width: 50%;
+    display: block;
+    clear: both;
+    max-width: calc(50% - 2.6%);
+}
+
 .entry-category, .entry-author {
     display: none;
 }

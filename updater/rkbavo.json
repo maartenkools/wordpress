@@ -1,8 +1,9 @@
 {
     "name" : "RK Bavo",
     "slug" : "rkbavo",
-    "download_url" : "https://cdn.rawgit.com/maartenkools/wordpress/master/out/themes/rkbavo.zip",
-    "version" : "1.0.16215.12158",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16215.12205/rkbavo.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16215.12205",
+    "version" : "1.0.16215.12205",
     "requires" : "4.0",
     "tested": "4.3",
     "author" : "Maarten Kools",

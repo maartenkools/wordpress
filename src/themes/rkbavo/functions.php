@@ -18,3 +18,9 @@ function wp_rkbavo_enqueue_styles()
 }
 
 add_action('wp_enqueue_scripts', 'wp_rkbavo_enqueue_styles', 20);
+
+require_once( dirname( __FILE__ ) . '/updater/theme-update-checker.php' );
+$updateChecker = new ThemeUpdateChecker(
+	'rkbavo',
+	'https://raw.githubusercontent.com/maartenkools/wordpress/master/updater/rkbavo.json'
+);

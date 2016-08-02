@@ -35,6 +35,10 @@ img
   padding:5px;
 }
 
+.post-meta {
+    visibility: hidden;
+}
+
 .top-image,.no-top-image
 {
   height:400px;
@@ -1043,6 +1047,22 @@ h3,h3 a,h5,h5 a,a:hover
 .popular-post > img,.popular-post
 {
   height:auto!important;
+}
+
+/* BIDS styling */
+.category-bids section:nth-of-type(2) .wpb_row {
+    margin-bottom: 0;
+}
+
+.category-bids section:nth-of-type(2) .wpb_row > .wpb_column {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.category-bids section:nth-of-type(2) img {
+    margin-bottom: 0 !important;
+    box-shadow: 5px 5px 5px #888888;
 }
 
 @media max-width 1199px {

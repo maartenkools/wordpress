@@ -1,0 +1,13 @@
+{
+    "name": "Antonius Bavo",
+    "slug": "antoniusbavo",
+    "download_url": "https://github.com/maartenkools/wordpress/releases/download/1.0.16221.12021/antoniusbavo.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.16221.12021",
+    "version": "1.0.16221.12021",
+    "requires": "4.0",
+    "tested": "4.5",
+    "author": "Maarten Kools",
+    "sections": {
+        "description": "Represents the theme for antoniusbavo.nl"
+    }
+}

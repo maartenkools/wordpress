@@ -36,6 +36,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 # Widgets
 # Content
 	## Posts and pages
+	    ### News Grid
 	## Comments
 # Infinite scroll
 # Media
@@ -43,6 +44,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
 
 /*--------------------------------------------------------------
 # Normalize
@@ -118,6 +120,7 @@ h1 {
 }
 
 h2 {
+    font-size: 1.8em;
 }
 
 h3 {

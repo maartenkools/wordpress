@@ -116,6 +116,8 @@ function antoniusbavo_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'antoniusbavo_scripts' );
 
+require get_template_directory() . '/inc/shortcodes.php';
+
 /**
  * Implement the Custom Header feature.
  */
@@ -140,3 +142,7 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+if (function_exists('vc_map')) {
+	require get_template_directory() . '/inc/visualcomposer.php';
+}

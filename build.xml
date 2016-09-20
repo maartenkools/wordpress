@@ -96,6 +96,10 @@
         <delete dir="${intermediate.dir}/themes" />
 
 		<echo message="Completed packaging the themes." />
+
+        <unzip dest="D:/wamp/www/antoniusbavo/wp-content/themes"
+               src="${out.dir}/antoniusbavo.zip"
+                overwrite="yes"/>
 	</target>
 
 	<target name="plugins">
@@ -115,6 +119,10 @@
         <echo></echo>
 
 		<echo message="Completed packaging the plugins." />
+
+        <!--<unzip dest="D:/wamp/www/antoniusbavo/wp-content/plugins"
+               src="${out.dir}/antoniusbavo-agenda.zip"
+               overwrite="yes"/>-->
 	</target>
 
 	<target name="build" depends="clean,themes,plugins" />

@@ -10,6 +10,8 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<div class="container_16">
+		<div class="grid_16">
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :

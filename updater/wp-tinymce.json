@@ -1,0 +1,13 @@
+{
+    "name" : "TinyMCE",
+    "slug" : "wp-tinymce",
+    "download_url" : "https://github.com/maartenkools/wordpress/releases/download/1.0.17016.12104/wp-tinymce.zip",
+    "details_url": "https://github.com/maartenkools/wordpress/releases/tag/1.0.17016.12104",
+    "version" : "1.0.17016.12104",
+    "requires" : "4.0",
+    "tested": "4.7.1",
+    "author" : "Maarten Kools",
+    "sections" : {
+        "description" : "Ensures TinyMCE is loaded in the admin area"
+    }
+}

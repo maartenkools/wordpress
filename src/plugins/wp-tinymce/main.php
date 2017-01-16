@@ -35,7 +35,7 @@ if (!function_exists('add_filter')) {
 	exit();
 }
 
-function wpu_autoload($class)
+function wp_tinymce_autoload($class)
 {
 	static $classes = null;
 
@@ -56,7 +56,7 @@ function wpu_autoload($class)
 }
 
 if (function_exists('spl_autoload_register')) {
-	spl_autoload_register('wpu_autoload');
+	spl_autoload_register('wp_tinymce_autoload');
 }
 
 $GLOBALS['wp_tinymce_plugin'] = new wp_tinymce\Plugin(__FILE__);

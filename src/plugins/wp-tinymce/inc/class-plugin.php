@@ -32,7 +32,7 @@ namespace wp_tinymce {
 				add_action( 'admin_enqueue_scripts', array( $this, 'enqueueAdminScripts' ) );
 			}
 
-			PucFactory::buildUpdateChecker(
+			\PucFactory::buildUpdateChecker(
 				'https://raw.githubusercontent.com/maartenkools/wordpress/master/updater/wp-tinymce.json',
 				$this->file,
 				'wp-tinymce'

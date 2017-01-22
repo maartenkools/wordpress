@@ -15,7 +15,6 @@ $settings = get_option( SH_NAME );
 </div>
 
 <?php wp_footer(); ?>
-<script type="text/javascript">Stripe.setPublishableKey('<?php echo STRIPE_PUBLIC_KEY; ?>');</script>
 
 </body>
 

@@ -8,7 +8,7 @@ $settings = get_option( SH_NAME );
 
 	<div class="container">
 
-		<p><?php echo stripslashes( sh_set( $settings, 'footer_copyright' ) ); ?>All rights reserved.</p>
+		<p><?php echo stripslashes( sh_set( $settings, 'footer_copyright' ) ); ?> All rights reserved.</p>
 
 	</div>
 

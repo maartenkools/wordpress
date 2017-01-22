@@ -1,0 +1,838 @@
+.tp-caption.medium_grey {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Arial;
+    background-color: #888;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 2px 4px;
+}
+
+.tp-caption.small_text {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    font-family: Arial;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.medium_text {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 20px;
+    font-family: Arial;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.large_text {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 40px;
+    font-family: Arial;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.very_large_text {
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: Arial;
+    white-space: nowrap;
+    letter-spacing: -2px;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.very_big_white {
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: Arial;
+    white-space: nowrap;
+    background-color: #000;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 4px 0;
+}
+
+.tp-caption.very_big_black {
+    position: absolute;
+    color: #000;
+    text-shadow: none;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: Arial;
+    white-space: nowrap;
+    background-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 4px 0;
+}
+
+.tp-caption.modern_medium_fat {
+    position: absolute;
+    color: #000;
+    text-shadow: none;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.modern_medium_fat_white {
+    color: #fff;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 800;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.modern_medium_light {
+    position: absolute;
+    color: #000;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 20px;
+    font-family: "Open Sans", sans-serif;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.modern_big_bluebg {
+    color: #fff;
+    line-height: 36px;
+    letter-spacing: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 41px;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #4e5b6c;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 3px 10px;
+}
+
+.tp-caption.modern_big_redbg {
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 36px;
+    font-family: "Open Sans", sans-serif;
+    background-color: #de543e;
+    letter-spacing: 0;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 10px 3px;
+}
+
+.tp-caption.modern_small_text_dark {
+    position: absolute;
+    color: #555;
+    text-shadow: none;
+    font-size: 14px;
+    line-height: 22px;
+    font-family: Arial;
+    white-space: nowrap;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.boxshadow {
+    -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.tp-caption.black {
+    color: #000;
+    text-shadow: none;
+}
+
+.tp-caption.noshadow {
+    text-shadow: none;
+}
+
+.tp-caption.thinheadline_dark {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.85);
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 30px;
+    font-family: "Open Sans";
+    background-color: transparent;
+}
+
+.tp-caption.thintext_dark {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.85);
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    font-family: "Open Sans";
+    background-color: transparent;
+}
+
+.tp-caption.largeblackbg {
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 70px;
+    font-family: "Open Sans";
+    background-color: #000;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0 20px;
+}
+
+.tp-caption.largepinkbg {
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 70px;
+    font-family: "Open Sans";
+    background-color: #db4360;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0 20px;
+}
+
+.tp-caption.largewhitebg {
+    position: absolute;
+    color: #000;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 70px;
+    font-family: "Open Sans";
+    background-color: #fff;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0 20px;
+}
+
+.tp-caption.largegreenbg {
+    position: absolute;
+    color: #fff;
+    text-shadow: none;
+    font-weight: 300;
+    font-size: 50px;
+    line-height: 70px;
+    font-family: "Open Sans";
+    background-color: #67ae73;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    padding: 0 20px;
+}
+
+.tp-caption.excerpt {
+    width: 150px;
+    height: auto;
+    color: #fff;
+    line-height: 36px;
+    letter-spacing: -1.5px;
+    font-family: Arial;
+    font-size: 41px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: #000;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 5px;
+}
+
+.tp-caption.large_bold_grey {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #666;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: none;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 4px 0;
+}
+
+.tp-caption.medium_thin_grey {
+    font-size: 34px;
+    line-height: 30px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #666;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: none;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 4px 0;
+}
+
+.tp-caption.small_thin_grey {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #757575;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: none;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 1px 4px 0;
+}
+
+.tp-caption.lightgrey_divider {
+    text-decoration: none;
+    background-color: rgba(235, 235, 235, 1);
+    width: 370px;
+    height: 3px;
+    background-position: initial initial;
+    background-repeat: initial initial;
+    border-color: #222;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.large_bold_darkblue {
+    font-size: 58px;
+    line-height: 60px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #34495e;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.medium_bg_darkblue {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #34495e;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.medium_bold_red {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #e33a0c;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.medium_light_red {
+    font-size: 21px;
+    line-height: 26px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #e33a0c;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.medium_bg_red {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #e33a0c;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.medium_bold_orange {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #f39c12;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.medium_bg_orange {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #f39c12;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.grassfloor {
+    text-decoration: none;
+    background-color: rgba(160, 179, 151, 1);
+    width: 4000px;
+    height: 150px;
+    border-color: #222;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.large_bold_white {
+    color: #fff;
+    line-height: 60px;
+    font-family: "Open Sans";
+    font-size: 58px;
+    font-weight: 700;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.medium_light_white {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.mediumlarge_light_white {
+    font-size: 64px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: Simonetta;
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.mediumlarge_light_white_center {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    text-align: center;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.medium_bg_asbestos {
+    font-size: 20px;
+    line-height: 20px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #7f8c8d;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.medium_light_black {
+    font-size: 30px;
+    line-height: 36px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.large_bold_black {
+    font-size: 58px;
+    line-height: 60px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #000;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.mediumlarge_light_darkblue {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #34495e;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.small_light_white {
+    font-size: 17px;
+    line-height: 28px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.roundedimage {
+    border-color: #222;
+    border-style: none;
+    border-width: 0;
+}
+
+.tp-caption.large_bg_black {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px 20px 15px;
+}
+
+.tp-caption.mediumwhitebg {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 300;
+    font-family: Simonetta;
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    text-shadow: none;
+    border-color: #000;
+    border-style: none;
+    border-width: 0;
+    padding: 5px 15px 10px;
+}
+
+.tp-caption.b_blauw {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    font-family: Simonetta;
+    color: #4169e1;
+    font-style: italic;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.b_goud {
+    font-size: 40px;
+    line-height: 40px;
+    font-weight: 700;
+    font-family: Simonetta;
+    color: #c88040;
+    text-decoration: none;
+    background-color: transparent;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+}
+
+.tp-caption.large_light_white {
+    font-size: 60px;
+    line-height: 36px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.smaller_light_maroon {
+    font-size: 22px;
+    line-height: 36px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #900;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.43);
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.smaller_light_white_transparent {
+    font-size: 42px;
+    line-height: 36px;
+    font-weight: 300;
+    font-family: Simonetta;
+    color: #fff;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.43);
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 2px 5px;
+}
+
+.tp-caption.large_light_white1 {
+    color: #fff;
+    line-height: 36px;
+    font-family: "Open Sans";
+    font-size: 45px;
+    font-weight: 300;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.black1 {
+    color: #000;
+    line-height: 44px;
+    font-family: "Arial Black", Gadget, sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    text-decoration: none;
+    background-color: transparent;
+    border-color: #000;
+    border-style: none;
+    border-width: 0;
+    padding: 0;
+}
+
+.tp-caption.medium_grey_big {
+    color: #fff;
+    line-height: 35px;
+    font-family: Arial;
+    font-size: 35px;
+    font-weight: 700;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: #888;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 2px 4px;
+}
+
+.tp-caption.modern_big_bluebg1 {
+    color: #fff;
+    line-height: 36px;
+    letter-spacing: 0;
+    font-family: "Open Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #4e5b6c;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    margin: 0;
+    padding: 3px 10px;
+}
+
+.tp-caption.medium_bg_orange_big {
+    color: #fff;
+    line-height: 20px;
+    font-family: "Open Sans";
+    font-size: 41px;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #f39c12;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.largegreenbgmedium {
+    font-size: 32px;
+    line-height: 32px;
+    font-weight: 600;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #67ae73;
+    border-color: #fff;
+    border-style: none;
+    border-width: 0;
+    padding: 0 20px;
+}
+
+.tp-caption.medium_bg_darkblue_big {
+    color: #fff;
+    line-height: 27px;
+    font-family: "Open Sans";
+    font-size: 27px;
+    font-weight: 800;
+    text-decoration: none;
+    background-color: #34495e;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.medium_bg_orange1 {
+    font-size: 33px;
+    line-height: 33px;
+    font-weight: 300;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #f39c12;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}
+
+.tp-caption.mediumbig_bg_red {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 800;
+    font-family: "Open Sans";
+    color: #fff;
+    text-decoration: none;
+    background-color: #e33a0c;
+    border-color: #ffd658;
+    border-style: none;
+    border-width: 0;
+    padding: 10px;
+}

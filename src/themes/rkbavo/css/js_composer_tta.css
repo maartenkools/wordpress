@@ -1,0 +1,56 @@
+/* == Tab styling == */
+
+/* Apply a :not selector to search for a class that's never going to be on there, to ensure this selector is more specific */
+.vc_tta-tabs:not([data-style_override]) .vc_tta-tab > a,
+.vc_tta-tabs:not([data-style_override]) .vc_tta-tab.vc_active > a {
+    background-color: rgb(76, 181, 174);
+    color: rgb(255, 255, 255);
+    border-radius: 0;
+    border: 0;
+    border-bottom: 1px solid transparent;
+}
+
+.vc_tta-tabs:not([data-style_override]) .vc_tta-tab:not(.vc_active) > a:hover {
+    color: rgb(76, 181, 174);
+}
+
+.vc_tta-tabs:not([data-style_override]) .vc_tta-tab.vc_active > a,
+.vc_tta-tabs:not([class*=vc_tta-gap]):not(.vc_tta-o-no-fill).vc_tta-tabs-position-top .vc_tta-tab.vc_active > a {
+    border-bottom-color: rgb(102, 102, 102);
+}
+
+.vc_tta-tabs:not([data-style_override]) .vc_tta-tabs-container {
+    overflow: visible;
+}
+
+.vc_tta-tabs:not([data-style_override]) .vc_tta-tabs-list {
+    -webkit-box-shadow: 1px 2px 1px 0 rgba(102, 102, 102, 0.75);
+    -moz-box-shadow: 1px 2px 1px 0 rgba(102, 102, 102, 0.75);
+    box-shadow: 1px 2px 1px 0 rgba(102, 102, 102, 0.75);
+}
+
+.vc_tta:not([data-style_override]) .vc_tta-panel-body,
+.vc_tta:not([data-style_override]) .vc_tta-panel-heading,
+.vc_tta:not([data-style_override]) .vc_tta-tab > a {
+    border-radius: 0;
+}
+
+.vc_tta-panel-body {
+    margin-top: 0;
+    background-color: #ffffff !important; /* The original style already has !important on it */
+}
+
+.tab-header {
+    margin: 0;
+    text-transform: uppercase;
+    padding-left: 1em;
+}
+
+.tab-footer {
+    background-color: #e9e9e9;
+    text-transform: uppercase;
+}
+
+.tab-footer a {
+    color: rgb(76, 181, 174);
+}

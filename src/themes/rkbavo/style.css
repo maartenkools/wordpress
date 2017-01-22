@@ -16,12 +16,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: .8em;
     color: #7e7e7e;
-    line-height: 1.8 !important;
+    line-height: 1.8;
 }
 
 p {
     line-height: 2em;
-    font-size: 16px !important;
+    font-size: 16px;
 }
 
 img {
@@ -50,7 +50,7 @@ a[href='#'] {
 .top-image .page-title,
 .top-image .post-title,
 .no-top-image .page-title,
-.no-top-image .post-title{
+.no-top-image .post-title {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -86,8 +86,15 @@ header {
     position: static;
 }
 
-footer {
-    background: transparent;
+.footer-bottom {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+}
+
+.footer-bottom p {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 0.75em;
 }
 
 .menu-container {

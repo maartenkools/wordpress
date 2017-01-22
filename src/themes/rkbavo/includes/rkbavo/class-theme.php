@@ -51,7 +51,7 @@ class Theme {
 
 	private function add_actions() {
 		add_action( 'admin_enqueue_scripts', 'rkbavo\\Actions::enqueue_admin_scripts' );
-		add_action( 'wp_enqueue_scripts', 'rkbavo\\Actions::enqueue_scripts' );
+		add_action( 'wp_enqueue_scripts', 'rkbavo\\Actions::enqueue_scripts', 100 );
 		add_action( 'wp_head', 'rkbavo\\Actions::head', 10000 );
 
 		if ( function_exists( 'vc_map' ) ) {

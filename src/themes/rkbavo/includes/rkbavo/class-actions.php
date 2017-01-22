@@ -9,10 +9,20 @@ namespace rkbavo;
 
 class Actions {
 	public static function enqueue_admin_scripts() {
-		wp_enqueue_style( 'rkbavo_admin', get_stylesheet_directory_uri() . '/css/admin.css', array('js_composer'), Theme::$current->version );
+		wp_enqueue_style( 'rkbavo_admin', get_stylesheet_directory_uri() . '/css/admin.css', array( 'js_composer' ), Theme::$current->version );
 	}
 
 	public static function enqueue_scripts() {
+		// Unregister unused scripts
+		$script_handles = array(
+			'2checkout',
+			'my_stripe'
+		);
+		foreach ( $script_handles as $script_handle ) {
+			wp_dequeue_script( $script_handle );
+			wp_deregister_script( $script_handle );
+		}
+
 		wp_enqueue_style( 'rkbavo_revolution_slider', get_stylesheet_directory_uri() . '/css/revolution_slider.css', array( 'rs-plugin-settings' ), Theme::$current->version );
 		wp_enqueue_style( 'rkbavo_js_composer_tta', get_stylesheet_directory_uri() . '/css/js_composer_tta.css', array( 'vc_tta_style' ), Theme::$current->version );
 	}
